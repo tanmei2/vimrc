@@ -1,3 +1,4 @@
+"git clone http://github.com/gmarik/vundle.git ~/.vim/bundle
 set nocompatible               " be iMproved
 filetype off                   " required!
 
@@ -12,7 +13,7 @@ Bundle 'Shougo/neocomplcache.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'majutsushi/tagbar'
-Bundle 'c.vim'
+"Bundle 'c.vim'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'ervandew/supertab'
 Bundle 'Raimondi/delimitMate'
