@@ -115,11 +115,10 @@ set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_S
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'"
 
 " Keybindings for plugin toggle
+nmap <F4> :Tbbd<cr>
 nmap <F5> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
-nmap <F3> :GundoToggle<cr>
-nmap <F4> :IndentGuidesToggle<cr>
-nmap  <D-/> :
+nmap <F7> :IndentGuidesToggle<cr>
 
 
 " Quickly edit/reload the vimrc file
