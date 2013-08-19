@@ -25,4 +25,4 @@ Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'sjl/gundo.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'humiaozuzu/fcitx-status'
-
+Bundle 'kien/ctrlp.vim'
