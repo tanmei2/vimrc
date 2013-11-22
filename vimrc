@@ -9,6 +9,8 @@ set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 " enable syntax hightlight and completion
 syntax on
 
+set modifiable
+
 "--------
 " Vim UI
 "--------
@@ -87,27 +89,9 @@ let NERDSpaceDelims=1
 " " nmap <D-/> :NERDComToggleComment<cr>
 let NERDCompactSexyComs=1"
 
-" NeoComplCache
-let g:neocomplcache_enable_at_startup=1
-let g:neoComplcache_disableautocomplete=1
-let g:neocomplcache_enable_smart_case=1
-let g:neocomplcache_min_syntax_length = 3
-let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
-set completeopt-=preview
-
-imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-smap <C-k> <Plug>(neocomplcache_snippets_force_expand)
-imap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-smap <C-l> <Plug>(neocomplcache_snippets_force_jump)
-
 " Enable omni completion
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType c setlocal omnifunc=ccomplete#Complete
-
-" SuperTab
-"let g:SuperTabDefultCompletionType='context'
-let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
-let g:SuperTabRetainCompletionType=2"
 
 " ctrlp
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store
@@ -119,11 +103,13 @@ nmap <F4> :Tbbd<cr>
 nmap <F5> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
 nmap <F7> :IndentGuidesToggle<cr>
+nmap <F8> :!astyle<CR>
 
 
 " Quickly edit/reload the vimrc file
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>>
 
-map <F12> :!ctags --langmap=c:+.pc -R ./ -f .tags<CR><CR>
+map <F12> :!ctags --langmap=c:+.pc -R -f .tags<CR><CR>
 
+let g:ycm_global_ycm_extra_conf = '/home/imtinge/.vim/.ycm_extra_conf.py'
