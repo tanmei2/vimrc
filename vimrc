@@ -113,3 +113,6 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>>
 map <F12> :!ctags --langmap=c:+.pc -R -f .tags<CR><CR>
 
 let g:ycm_global_ycm_extra_conf = '/home/imtinge/.vim/ycm_extra_conf.py'
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
