@@ -22,3 +22,4 @@ Bundle 'tpope/vim-surround'
 
 Bundle 'scrooloose/syntastic'
 Bundle 'Valloric/YouCompleteMe'
+Bundle 'SirVer/ultisnips'
