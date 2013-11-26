@@ -56,7 +56,7 @@ set tabstop=4       " tab width
 set softtabstop=4   " backspace
 set shiftwidth=4    " indent width
 " set textwidth=79
-" set smarttab
+set smarttab
 set expandtab       " expand tab to space
 
 
@@ -103,7 +103,7 @@ nmap <F4> :Tbbd<cr>
 nmap <F5> :TagbarToggle<cr>
 nmap <F6> :NERDTreeToggle<cr>
 nmap <F7> :IndentGuidesToggle<cr>
-nmap <F8> :!astyle<CR>
+nmap <F8> :%!astyle<CR>
 
 
 " Quickly edit/reload the vimrc file
@@ -113,6 +113,3 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>>
 map <F12> :!ctags --langmap=c:+.pc -R -f .tags<CR><CR>
 
 let g:ycm_global_ycm_extra_conf = '/home/imtinge/.vim/ycm_extra_conf.py'
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
-let g:UltiSnipsJumpBackwardTrigger="<c-k>"
