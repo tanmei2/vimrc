@@ -35,7 +35,7 @@ let g:EasyMotion_leader_key =';'
 " NERDTree
 let NERDTreeWinPos="right"
 
-let g:ycm_extra_conf_vim_data=~/.vim/ycm_extra_conf.py
+let g:ycm_extra_conf_vim_data="~/.vim/ycm_extra_conf.py"
 
 nnoremap <F4> :Tbbd<cr>
 nnoremap <F5> :IndentGuidesToggle<cr>
