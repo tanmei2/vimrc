@@ -1,3 +1,4 @@
+set shell=bash
 source ~/.vim/.bundles.vim 
 
 autocmd BufRead,BufNewFile *.pc setfiletype c
@@ -6,15 +7,12 @@ set fileencodings=utf-8,gb18030,gbk,gb2312,cp936,latin1
 set encoding=utf-8
 
 filetype plugin indent on
-set t_Co=256
-colorscheme Tomorrow-Night
 syntax enable
 
 set incsearch
 set hlsearch
 set smartcase
 
-set nowrap
 set number
 set laststatus=2
 
