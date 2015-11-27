@@ -4,18 +4,21 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
-Plugin 'gmarik/vundle'
+Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'tpope/vim-surround'
+Plugin 'ajh17/VimCompletesMe'
+Plugin 'easymotion/vim-easymotion'
 Plugin 'humiaozuzu/TabBar'
-Plugin 'vim-scripts/fcitx.vim'
+Plugin 'brookhong/cscope.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'wesleyche/SrcExpl'
+Plugin 'Yggdroot/indentLine'
+Plugin 'rking/ag.vim'
+Plugin 'terryma/vim-expand-region'
+Plugin 'tomasr/molokai'
 
 call vundle#end()
 filetype plugin indent on
