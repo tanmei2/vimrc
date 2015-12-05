@@ -1,10 +1,14 @@
 set shell=zsh
-source ~/.vim/.bundles.vim 
 
 set fileencodings=utf-8,chinese,latin1
 set encoding=utf-8
 
+source ~/.vim/.bundles.vim 
+
+set nocompatible
+
 syntax enable
+syntax on
 
 set incsearch
 set hlsearch
@@ -22,6 +26,7 @@ set autoindent
 set smartindent
 
 set cursorline
+set nowrap
 set showmode
 
 set showmatch
@@ -30,17 +35,18 @@ set smartcase
 set wildmenu
 
 
-let mapleader="\<space>"
-let maplocalleader="\<space>"
+set foldmethod=syntax
+set nofoldenable
 
-nnoremap <Leader>w :w<CR>
-
-
+let mapleader=";"
+let maplocalleader=";"
 "airline
 let g:airline_theme='powerlineish'
 let g:airline_left_sep=' '
 let g:airline_right_sep=' '
 let g:airline_section_z=' '
+" easymotion
+let g:EasyMotion_leader_key =';'
 
 " easymotion
 let g:EasyMotion_leader_key =';'
@@ -51,12 +57,9 @@ colorscheme molokai
 let g:Tb_MaxSize=2
 let g:Tb_TabWrap=1
 
-nnoremap <CR> G
-nnoremap <BS> gg
+nnoremap <CR> <C-v>
+nnoremap <BS> <C-f>
 
-" vim-region-expand
-vnoremap V <Plug>(expand_region_expand)
-vnoremap V <Plug>(expand_region_shrink)
 
 " s: Find this C symbol
 nnoremap  <leader>fs :call CscopeFind('s', expand('<cword>'))<CR>
