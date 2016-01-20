@@ -1,26 +1,32 @@
-call plug#begin('~/.vim/plugged')
-
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
-Plug 'vim-airline/vim-airline'
-Plug 'kien/rainbow_parentheses.vim'
-Plug 'scrooloose/nerdcommenter'
-Plug 'Yggdroot/IndentLine'
-Plug 'majutsushi/tagbar'
-Plug 'terryma/vim-expand-region'
-Plug 'unblevable/quick-scope'
-Plug 'easymotion/vim-easymotion'
-Plug 'junegunn/vim-easy-align'
-Plug 'Raimondi/delimitMate'
-Plug 'Shougo/unite.vim'
-if has('win32')
-    Plug 'sgur/unite-everything'
+if has('vim_starting')
+    if &compatible
+        set nocompatible
+    endif
+    set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
+call neobundle#begin(expand('~/.vim/bundle/'))
+NeoBundleFetch 'Shougo/neobundle.vim'
 
-call plug#end()
+NeoBundle 'Shougo/vimproc.vim', { 'build': {'mac': 'make', 'win', 'mingw32-make'} }
+NeoBundle 'Shougo/unite.vim'
+if has('win32')
+    NeoBundle 'sgur/unite-everything'
+endif
+NeoBundle 'Valloric/YouCompleteMe', { 'build': {'mac': './install.py --clang-completer --system-libclang', 'win': './install.py --clang-completer'} }
+NeoBundle 'vim-airline/vim-airline'
+NeoBundle 'kien/rainbow_parentheses.vim'
+NeoBundle 'Yggdroot/IndentLine'
+NeoBundle 'junegunn/vim-easy-align'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'unblevable/quick-scope'
+NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'terryma/vim-expand-region'
 
-set nocompatible
+call neobundle#end()
+
 
 set autoread
 set nobackup
@@ -51,9 +57,9 @@ set smartcase
 set smartindent
 set autoindent
 
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set smarttab
 
