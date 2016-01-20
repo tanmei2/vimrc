@@ -24,6 +24,7 @@ NeoBundle 'majutsushi/tagbar'
 NeoBundle 'unblevable/quick-scope'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'terryma/vim-expand-region'
+NeoBundle 'sjl/gundo.vim'
 
 call neobundle#end()
 
