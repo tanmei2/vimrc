@@ -2,6 +2,7 @@ vimrc
 =====
 
 ##git clone https://github.com/tanmei2/vimrc .vim
-##curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+##mkdir -p ~/.vim/bundle
+##git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 ##ln -s ~/.vim/vimrc ~/.vimrc
-##vim -c PlugInstall
+##vim +NeoBundleInstall +qall

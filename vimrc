@@ -8,7 +8,7 @@ endif
 call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-NeoBundle 'Shougo/vimproc.vim', { 'build': {'mac': 'make', 'win', 'mingw32-make'} }
+NeoBundle 'Shougo/vimproc.vim', { 'build': {'mac': 'make', 'win': 'mingw32-make'} }
 NeoBundle 'Shougo/unite.vim'
 if has('win32')
     NeoBundle 'sgur/unite-everything'
