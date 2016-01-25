@@ -9,22 +9,27 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'Shougo/vimproc.vim', { 'build': {'mac': 'make', 'win': 'mingw32-make'} }
-NeoBundle 'Shougo/unite.vim'
-if has('win32')
-    NeoBundle 'sgur/unite-everything'
-endif
 NeoBundle 'Valloric/YouCompleteMe', { 'build': {'mac': './install.py --clang-completer --system-libclang', 'win': './install.py --clang-completer'} }
+NeoBundle 'Raimondi/delimitMate', { 'build': {'mac': 'make', 'win': 'mingw32-make'}}
+NeoBundle 'crusoexia/vim-dracula'
 NeoBundle 'vim-airline/vim-airline'
 NeoBundle 'kien/rainbow_parentheses.vim'
+
 NeoBundle 'Yggdroot/IndentLine'
 NeoBundle 'junegunn/vim-easy-align'
-NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'scrooloose/nerdcommenter'
 NeoBundle 'majutsushi/tagbar'
 NeoBundle 'unblevable/quick-scope'
 NeoBundle 'easymotion/vim-easymotion'
 NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'sjl/gundo.vim'
+NeoBundle 'vimcn/vimcdoc'
+NeoBundle 'Shougo/unite.vim'
+
+if has('win32')
+    NeoBundle 'sgur/unite-everything'
+endif
+
 
 call neobundle#end()
 
@@ -64,21 +69,30 @@ set shiftwidth=2
 set expandtab
 set smarttab
 
-set background=dark
+set guioptions-=l
+set guioptions-=r
+set guioptions-=L
+set guioptions-=R
+set guifont=Source\ Code\ Pro:h14 
+set guifontwide=华文黑体:h16
 set t_Co=256
 
-colorscheme peachpuff
+set background=dark
+
+colorscheme dracula
 
 autocmd! bufwritepost .vimrc source %
 autocmd! InsertLeave * if pumvisible() == 0|pclose|endif
 
-let mapleader = ';'
-let maplocalleader = ';'
-let g:mapleader = ';'
+
+let mapleader = "\<Space>"
+let maplocalleader = "\<Space>"
+let g:mapleader = "\<Space>"
 
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<CR>"
 inoremap kj <Esc>
 
+nnoremap ; :
 noremap <silent> <leader>/ :nohls<CR>
 
 vnoremap < <gv
@@ -86,7 +100,7 @@ vnoremap > >gv
 
 noremap <Leader>sa ggVG
 
-nnoremap <leader>v V`}
+nnoremap gv V`}
 nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
 nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 
@@ -130,8 +144,8 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 " }}}
 
 " expandregion {{{
-    noremap <silent> <leader>k <Plug>(expand_region_expand)
-    noremap <silent> <leader>j <Plug>(expand_region_shrink)
+    map <leader>k <Plug>(expand_region_expand)
+    map <leader>j <Plug>(expand_region_shrink)
 " }}}
 
 " quickscope {{{
@@ -157,3 +171,4 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
 " quick-scope {{{
     let g:qs_highlight_on_keys = ['f', 'F']
 " }}}
+

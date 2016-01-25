@@ -3,3 +3,6 @@
 autoload/
 plugged/
 bundle/
+doc/
+syntax/
+plugin/
