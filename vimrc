@@ -25,6 +25,7 @@ NeoBundle 'terryma/vim-expand-region'
 NeoBundle 'sjl/gundo.vim'
 NeoBundle 'vimcn/vimcdoc'
 NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/vimfiler.vim'
 
 if has('win32')
     NeoBundle 'sgur/unite-everything'
@@ -172,3 +173,7 @@ nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
     let g:qs_highlight_on_keys = ['f', 'F']
 " }}}
 
+" unite {{{
+    nnoremap <leader>b :Unite -quick-match buffer<cr>
+    nnoremap <leader>/ :Unite grep:.<cr>
+"}}}
